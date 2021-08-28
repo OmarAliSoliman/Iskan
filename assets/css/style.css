@@ -367,7 +367,11 @@ button {
 .mynavbar .lista li:hover a {
   height: 94px;
 }
-.mynavbar .lang {
+.mynavbar .openSideNav {
+  display: none;
+}
+
+.lang {
   position: absolute;
   background-color: #f4f4f4;
   border-radius: 30px;
@@ -379,11 +383,11 @@ button {
   left: 0;
   transform: translate(0, -50%);
 }
-.mynavbar .lang select {
+.lang select {
   border: 0;
   background-color: transparent;
 }
-.mynavbar .lang .nice-select {
+.lang .nice-select {
   height: 100%;
   line-height: 33px;
   padding-right: 10px;
@@ -392,16 +396,13 @@ button {
   border: 0;
   font-weight: bold;
 }
-.mynavbar .lang .nice-select::after {
+.lang .nice-select::after {
   right: unset;
   left: 0;
   color: #f0a500 !important;
   margin-top: -2px;
   border-bottom: 2px solid #f0a500;
   border-right: 2px solid #f0a500;
-}
-.mynavbar .openSideNav {
-  display: none;
 }
 
 /* header */
@@ -453,6 +454,13 @@ button {
   border: 1px solid #f0a500;
 }
 .header .search-box input[type=checkbox]:checked ~ .card h5 {
+  color: #fff;
+}
+.header .search-box input[type=radio]:checked ~ .card {
+  background-color: #f0a500;
+  border: 1px solid #f0a500;
+}
+.header .search-box input[type=radio]:checked ~ .card h5 {
   color: #fff;
 }
 .header .search-box .all-inputs {
@@ -665,6 +673,9 @@ button {
   display: flex;
   justify-content: space-between;
 }
+.ourlicents .owl-theme .owl-nav i {
+  font-size: 20px;
+}
 .ourlicents .owl-theme .owl-nav .owl-prev {
   left: -20px;
   position: absolute;
@@ -745,7 +756,8 @@ button {
   background-color: #F0A500;
   position: absolute;
   width: 345px;
-  top: 15%;
+  max-width: 100%;
+  top: calc(100% - 450px);
   right: 17px;
   padding: 28px;
   padding-bottom: 40px;
@@ -774,6 +786,124 @@ button {
 }
 .contact-us .contact-info ul li:last-child {
   border-bottom: 0;
+}
+
+/* breadcrumb */
+.breadcrumb {
+  height: 602px;
+}
+
+/* real state page */
+.real-estate-page {
+  margin-bottom: 130px;
+}
+.real-estate-page .realEstateCard {
+  margin-bottom: 20px;
+}
+
+/* pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+.pagination .page-item .page-link {
+  background-color: #000;
+  width: 55px;
+  height: 55px;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
+  opacity: 0.7;
+}
+.pagination .page-item:hover .page-link {
+  opacity: 1;
+}
+.pagination .page-item.active .page-link {
+  opacity: 1;
+}
+
+/* contact us page */
+.contact-us-page {
+  margin-bottom: 90px;
+}
+.contact-us-page .breadcrumb {
+  position: relative;
+}
+.contact-us-page .breadcrumb::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.36);
+}
+.contact-us-page .contact-form {
+  width: 909px;
+  margin: auto;
+  max-width: 100%;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 50px 132px;
+  margin-top: -380px;
+  z-index: 9;
+  position: relative;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+.contact-us-page .contact-form h5 {
+  font-size: 40px;
+  text-align-last: center;
+  margin-bottom: 35px;
+}
+.contact-us-page .contact-form .form-control {
+  height: 86px;
+  border: 1px solid #AFAFAF;
+  border-radius: 0;
+}
+.contact-us-page .contact-form .form-control::placeholder {
+  font-size: 30px;
+  color: #1a1c20;
+}
+.contact-us-page .contact-form textarea {
+  height: 222px !important;
+  resize: none;
+}
+.contact-us-page .contact-form .btn {
+  background-color: #1a1c20;
+  color: #fff;
+  font-size: 28px;
+  text-align-last: center;
+  border: 0;
+  border-radius: 0;
+  width: 100%;
+  padding: 22px 10px;
+  font-weight: bold;
+  border: 2px solid #1a1c20;
+}
+.contact-us-page .contact-form .btn:hover {
+  background-color: transparent;
+  color: #1a1c20;
+}
+.contact-us-page .contact-us {
+  padding: 0;
+}
+.contact-us-page .contact-us .contact-info {
+  right: -25px;
+}
+.contact-us-page .contact-us .contact-info h5 {
+  color: #fff;
+}
+.contact-us-page .contact-us .contact-info ul li {
+  border-bottom: 1px solid #fff;
+}
+.contact-us-page .contact-us .contact-info i {
+  color: #fff;
 }
 
 /* footer */
@@ -812,6 +942,19 @@ button {
 .site-footer .footer-links ul li:hover a {
   border-right: 2px solid #fff;
   color: #f0a500;
+}
+.site-footer .footer-lang {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.site-footer .footer-lang .lang {
+  position: unset !important;
+  transform: translate(0);
+}
+.site-footer .footer-lang .lang .nice-select {
+  padding-right: 0;
 }
 .site-footer .footer-contact {
   display: flex;
@@ -858,6 +1001,10 @@ button {
   .top-header .contact {
     justify-content: flex-end;
   }
+
+  .site-footer .footer-contact .mob span {
+    font-size: 18px;
+  }
 }
 @media (max-width: 991px) {
   .top-header {
@@ -888,6 +1035,24 @@ button {
   .mynavbar .openSideNav i {
     color: #fff;
   }
+
+  .footer-logo {
+    text-align-last: center;
+  }
+
+  .site-footer .footer-lang {
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .site-footer .footer-contact {
+    align-items: center;
+  }
+
+  .contact-us-page .contact-form {
+    padding: 40px 40px;
+  }
 }
 /* Small Screens */
 /* Mobile & Tablets */
@@ -896,10 +1061,69 @@ button {
   .section-header h5 {
     font-size: 40px;
   }
+
+  .site-footer .footer-links {
+    margin-top: 20px;
+  }
+  .site-footer .footer-links li {
+    width: 50% !important;
+  }
+
+  .header .search-box {
+    bottom: -87px;
+  }
+
+  .header {
+    height: 670px;
+    margin-bottom: 150px;
+  }
+
+  .ourlicents .owl-theme .owl-nav {
+    position: unset;
+  }
+
+  .ourlicents .owl-theme .owl-nav .owl-next {
+    right: 0;
+    position: unset;
+  }
+
+  .ourlicents .owl-theme .owl-nav .owl-prev {
+    left: 0;
+    position: unset;
+  }
+
+  .contact-us-page .contact-form h5 {
+    font-size: 29px;
+    margin-bottom: 20px;
+  }
+
+  .contact-us-page .contact-form {
+    padding: 20px 20px;
+  }
+
+  .contact-us-page .contact-form .form-control {
+    height: 60px;
+  }
+  .contact-us-page .contact-form .form-control::placeholder {
+    font-size: 20px;
+  }
+
+  .contact-us-page .contact-form .btn {
+    font-size: 20px;
+    padding: 10px 10px;
+  }
 }
 @media (max-width: 376px) {
   .section-header h5 {
     font-size: 30px;
+  }
+
+  .contact-us .contact-info {
+    right: 0;
+  }
+
+  .contact-us-page .contact-form h5 {
+    font-size: 25px;
   }
 }
 .activeInput {
@@ -908,7 +1132,7 @@ button {
   transform: translate(2px);
 }
 
-.header, .realEstateCard .card-img, .contact-us {
+.header, .realEstateCard .card-img, .contact-us, .breadcrumb {
   -webkit-background-size: cover;
   -webkit-background-position: center;
   -moz-background-position: center;
