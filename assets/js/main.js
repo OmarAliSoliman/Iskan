@@ -1,7 +1,6 @@
 $(document).ready(function () {
-  // choses-slider
 
-  // AOS.init();
+  AOS.init();
 
   if ($(".bg-sidenavOpen").length) {
     $(".bg-sidenavOpen").on("click", function () {
@@ -30,66 +29,20 @@ $(document).ready(function () {
     );
   });
 
-  if ($(".langSelect").length) {
-    $(".langSelect").niceSelect();
-  }
 
   if ($(".customSelect").length) {
     $(".customSelect").niceSelect();
   }
 
-  $(".sidenav li.NesteListParent").click(function () {
-    $(this).children("ul").slideToggle();
-    $(this).children("i").toggleClass("iMenue");
+  $(".see-more").click(function () {
+    $('.know-more-box').slideDown();
   });
 
-  if ($(".counter").length) {
-    $(".counter").counterUp({
-      time: 1000,
-    });
-  }
+  $(".read-less").click(function () {
+    $('.know-more-box').slideUp();
+  });
 
-  var currentDir = $("a").css("direction");
-  console.log(currentDir);
-
-  if ($(".webinars-slider").length) {
-    $(".webinars-slider").slick({
-      dots: true,
-      infinite: false,
-      speed: 300,
-      slidesToShow: 2,
-      rtl: currentDir == "rtl" ? true : false,
-      slidesToScroll: 1,
-      autoplay: true,
-      arrows: false,
-      loop: true,
-      infinite: true,
-      responsive: [
-        {
-          breakpoint: 1026,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            infinite: true,
-          },
-        },
-        {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-          },
-        },
-        {
-          breakpoint: 524,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-          },
-        },
-      ],
-    });
-  }
+  
 
   var realstateSlider = document.querySelector("#realStateSlider");
 
@@ -157,6 +110,41 @@ $(document).ready(function () {
       },
     },
   });
+
+
+
+  $('.mainslider').owlCarousel({
+    loop:true,
+    margin:10,
+    items:1,
+    dots:false,
+    URLhashListener:true
+  })
+  $('.forslider').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    items:3,
+    dots:false,
+    center: true,
+    URLhashListener:true,
+    responsive: {
+      0: {
+        items: 2,
+      },
+      524:{
+        items: 2,
+      },
+      768: {
+        items: 3,
+      },
+      1440: {
+        items: 3,
+      }
+    }
+  })
+
+
 
 });
 

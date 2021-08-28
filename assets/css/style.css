@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
 html {
   scroll-behavior: smooth;
@@ -104,7 +105,7 @@ button {
   top: 0;
   width: 180px;
   height: 100%;
-  background-color: #25a1a5;
+  background-color: #f0a500;
   -moz-animation: move-progress 3s linear infinite;
   -ms-animation: move-progress 3s linear infinite;
   -o-animation: move-progress 3s linear infinite;
@@ -161,41 +162,57 @@ button {
   text-align: center;
   padding-bottom: 10px;
 }
-.sidenav .navItem {
-  margin-bottom: 20px;
-  text-align: right;
-  display: block;
+.sidenav .lista {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 20px;
 }
-.sidenav .navItem:last-child {
-  background-color: #f0a500;
-  width: 190px;
-  text-align: right;
-  height: 44px;
-  line-height: 44px;
-  float: right;
+.sidenav .lista .nav-link {
+  position: relative;
 }
-.sidenav .navItem:last-child .navLink {
-  color: #fff;
-}
-.sidenav .navItem:last-child i {
-  width: 30px;
-  height: 30px;
-  background-color: #fff;
+.sidenav .lista .nav-link::after {
+  content: "";
+  position: absolute;
+  margin-top: 3px;
+  right: 0;
   color: #f0a500;
-  border-radius: 50%;
-  line-height: 30px;
-  text-align: center;
-  margin-right: 5px;
 }
-.sidenav .navLink {
-  text-decoration: none;
+.sidenav .lista .nav-link a {
+  color: #1a1c20;
+  font-size: 20px;
+  font-weight: bold;
+}
+.sidenav .social ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+.sidenav .social ul a {
+  margin-right: 0;
+  margin-left: 0;
+  margin: 8px;
+}
+.sidenav .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.sidenav .contact .con {
+  margin-bottom: 10px;
+}
+.sidenav .contact .con i {
+  color: #f0a500;
+}
+.sidenav .contact .con span {
   font-size: 18px;
-  color: #002543;
-  transition: 0.3s;
-  padding-right: 16px;
+  color: #1a1c20;
 }
-.sidenav .navLink:hover {
-  color: #f0a500;
+.sidenav .contact .con a {
+  font-size: 18px;
+  color: #1a1c20;
 }
 .sidenav .closebtn {
   position: absolute;
@@ -753,7 +770,7 @@ button {
   height: 100%;
 }
 .contact-us .contact-info {
-  background-color: #F0A500;
+  background-color: #f0a500;
   position: absolute;
   width: 345px;
   max-width: 100%;
@@ -863,7 +880,7 @@ button {
 }
 .contact-us-page .contact-form .form-control {
   height: 86px;
-  border: 1px solid #AFAFAF;
+  border: 1px solid #afafaf;
   border-radius: 0;
 }
 .contact-us-page .contact-form .form-control::placeholder {
@@ -904,6 +921,236 @@ button {
 }
 .contact-us-page .contact-us .contact-info i {
   color: #fff;
+}
+
+/* who us page */
+.who-us-page {
+  margin-bottom: 174px;
+}
+.who-us-page .who-content {
+  margin-top: 50px;
+}
+.who-us-page .who-content .par-content {
+  font-size: 30px;
+  line-height: 41px;
+}
+.who-us-page .our-goals {
+  margin-top: 84px;
+}
+.who-us-page .our-goals .row {
+  margin: 0;
+}
+.who-us-page .our-goals .row .col-lg-6 {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* goal-card */
+.goal-card {
+  background-color: #1a1c20;
+  padding: 55px 55px;
+  transition: all 0.3s ease-in-out;
+}
+.goal-card .section-header {
+  margin-top: 18px;
+  color: #f0a500;
+}
+.goal-card .section-header h5 {
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.goal-card .card-text {
+  font-size: 30px;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.goal-card:hover {
+  transform: scale(1.06);
+  background-color: #f0a500;
+}
+.goal-card:hover .section-header h5 {
+  color: #000;
+}
+.goal-card:hover .section-header span {
+  background-color: #000;
+}
+.goal-card:hover .card-text {
+  color: #000;
+}
+
+/* real-state-details-page */
+.real-state-details-page {
+  margin-bottom: 73px;
+}
+.real-state-details-page .mainslider .item {
+  height: 600px;
+}
+.real-state-details-page .forslider .item img {
+  height: 100px;
+}
+.real-state-details-page .reat-state-info {
+  margin-top: 92px;
+}
+.real-state-details-page .reat-state-info .state-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.real-state-details-page .reat-state-info .state-name h5 {
+  font-size: 47px;
+  font-weight: bold;
+  margin: 0;
+}
+.real-state-details-page .reat-state-info .state-name .date {
+  font-size: 28px;
+  color: #A09C9C;
+}
+.real-state-details-page .reat-state-info .state-price {
+  margin-top: 30px;
+  font-size: 41px;
+  color: #f0a500;
+  font-weight: bold;
+}
+.real-state-details-page .reat-state-info .state-details {
+  background-color: #F4F4F4;
+  padding: 16px 34px;
+  padding-bottom: 80px;
+  margin-top: 24px;
+}
+.real-state-details-page .reat-state-info .state-details h5 {
+  font-size: 40px;
+}
+.real-state-details-page .reat-state-info .state-details .card-options {
+  margin-top: 33px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.real-state-details-page .reat-state-info .state-details .card-options li {
+  width: 24%;
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+  border-radius: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.real-state-details-page .reat-state-info .state-details .card-options li span {
+  font-size: 19px;
+  font-weight: 500;
+  margin-right: 5px;
+  color: #000;
+}
+.real-state-details-page .reat-state-info .state-details .spcae {
+  font-size: 30px;
+  color: #1a1c20;
+}
+.real-state-details-page .reat-state-info .options {
+  display: flex;
+  margin-top: 30px;
+}
+.real-state-details-page .reat-state-info .options a {
+  width: 49%;
+  background-color: #f0a500;
+  color: #fff;
+  padding: 12px 12px;
+  text-align: center;
+  font-size: 30px;
+  margin-left: 1%;
+  border-radius: 10px;
+  border: 2px solid #f0a500;
+}
+.real-state-details-page .reat-state-info .options a:hover {
+  background-color: transparent;
+  color: #1a1c20;
+}
+.real-state-details-page .place-know-more {
+  margin-top: 71px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.real-state-details-page .place-know-more h5 {
+  font-size: 30px;
+  color: #1a1c20;
+}
+.real-state-details-page .place-know-more i {
+  color: #f0a500;
+  transition: all 0.3s ease-in-out;
+}
+.real-state-details-page .place-know-more .see-more {
+  color: #f0a500;
+  cursor: pointer;
+}
+.real-state-details-page .place-know-more .see-more i {
+  font-size: 13px;
+}
+.real-state-details-page .place-know-more .see-more:hover {
+  color: #1a1c20;
+}
+.real-state-details-page .place-know-more .see-more:hover i {
+  color: #1a1c20;
+}
+.real-state-details-page .know-more-box {
+  background-color: #F4F4F4;
+  padding-top: 18px;
+  padding-right: 70px;
+  padding-bottom: 90px;
+  padding-left: 70px;
+  margin-top: 40px;
+  position: relative;
+  display: none;
+}
+.real-state-details-page .know-more-box .read-less {
+  position: absolute;
+  cursor: pointer;
+  left: 50px;
+  bottom: 40px;
+  color: #f0a500;
+}
+.real-state-details-page .know-more-box .read-less i {
+  font-size: 13px;
+}
+.real-state-details-page .know-more-box .read-less:hover {
+  color: #1a1c20;
+}
+.real-state-details-page .know-more-box .read-less:hover i {
+  color: #1a1c20;
+}
+.real-state-details-page .know-more-box .first-features li {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+.real-state-details-page .know-more-box .head {
+  font-size: 35px;
+  color: #f0a500;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.real-state-details-page .know-more-box .head2 {
+  margin-top: 0;
+}
+.real-state-details-page .know-more-box .second-feature {
+  font-size: 30px;
+}
+.real-state-details-page .know-more-box .featr-2 {
+  border-right: 1px solid #707070;
+  padding-right: 20px;
+}
+.real-state-details-page .related-real-state {
+  margin-top: 88px;
+}
+.real-state-details-page .related-real-state .section-header {
+  justify-content: flex-start;
+  margin-bottom: 50px;
+}
+.real-state-details-page .related-real-state .realEstateCard {
+  margin-bottom: 20px;
 }
 
 /* footer */
@@ -1053,6 +1300,16 @@ button {
   .contact-us-page .contact-form {
     padding: 40px 40px;
   }
+
+  .real-state-details-page .place-know-more {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .real-state-details-page .mainslider .item {
+    height: 500px;
+  }
 }
 /* Small Screens */
 /* Mobile & Tablets */
@@ -1112,6 +1369,61 @@ button {
     font-size: 20px;
     padding: 10px 10px;
   }
+
+  .who-us-page .who-content .par-content {
+    font-size: 22px;
+  }
+
+  .goal-card {
+    padding: 20px 20px;
+    margin-bottom: 20px;
+  }
+
+  .goal-card .card-text {
+    font-size: 24px;
+  }
+
+  .real-state-details-page .mainslider .item {
+    height: 400px;
+  }
+
+  .real-state-details-page .reat-state-info .state-name {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .real-state-details-page .reat-state-info .state-details .card-options li {
+    width: auto;
+  }
+
+  .real-state-details-page .reat-state-info .options a {
+    font-size: 25px;
+  }
+
+  .real-state-details-page .place-know-more h5 {
+    font-size: 25px;
+  }
+
+  .real-state-details-page .know-more-box {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .section-header h5 {
+    font-size: 27px;
+  }
+
+  .real-state-details-page .know-more-box .second-feature {
+    font-size: 26px;
+  }
+
+  .real-state-details-page .know-more-box .featr-2 {
+    margin-top: 30px;
+  }
+
+  .real-state-details-page .place-know-more .see-more {
+    font-size: 20px;
+  }
 }
 @media (max-width: 376px) {
   .section-header h5 {
@@ -1125,6 +1437,36 @@ button {
   .contact-us-page .contact-form h5 {
     font-size: 25px;
   }
+
+  .real-state-details-page .reat-state-info .options a {
+    font-size: 15px;
+  }
+
+  .real-state-details-page .place-know-more h5 {
+    font-size: 20px;
+  }
+
+  .section-header h5 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .real-state-details-page .know-more-box .second-feature {
+    font-size: 26px;
+  }
+}
+
+@media(max-width: 325px){
+  .realEstateCard .card-body .real-info{
+    flex-direction: column;
+    align-items: center;
+  }
+  .realEstateCard .card-body .real-info .card-price{
+    margin-top: 10px;
+  }
+  .realEstateCard .card-body .card-options li{
+    flex-direction: column;
+  }
 }
 .activeInput {
   opacity: 1 !important;
@@ -1132,13 +1474,18 @@ button {
   transform: translate(2px);
 }
 
-.header, .realEstateCard .card-img, .contact-us, .breadcrumb {
+.header, .realEstateCard .card-img, .contact-us, .breadcrumb, .real-state-details-page .mainslider .item {
   -webkit-background-size: cover;
   -webkit-background-position: center;
   -moz-background-position: center;
   -moz-background-size: cover;
   background-position: center;
   background-size: cover;
+}
+
+.sidenav .lista .nav-link::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
 }
 
 /*# sourceMappingURL=style.css.map */

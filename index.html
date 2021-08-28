@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./assets/css/all.min.css">
   <link rel="stylesheet" href="./assets/css/aos.css">
   <link rel="stylesheet" href="./assets/css/bootstrap-ar.min.css">
+  <link rel="stylesheet" href="./assets/css/jquery-ui.min.css">
   <link rel="stylesheet" href="./assets/css/nice-select.css">
   <link rel="stylesheet" href="./assets/css/owl.carousel.css">
   <link rel="stylesheet" href="./assets/css/owl.theme.default.css">
@@ -20,15 +21,48 @@
 
   <div class="bg-sidenavOpen"></div>
 
+
+
+  <div class="splash">
+    <div>
+      <img src="./assets/images/logo.png" alt="" />
+      <div class="loadProgress">
+        <span class="lineStyle"></span>
+      </div>
+    </div>
+  </div>
+
+
   <div class="sidenav" id="mySidenav">
+    <div class="closebtn" onclick="closeNav()">
+      <i class="fas fa-times"></i>
+    </div>
     <img src="./assets/images/logo.png" alt="">
-    <ul class="list-unstyled">
-      <li><a href="">الرئيسية</a></li>
-      <li><a href="">من نحن</a></li>
-      <li><a href="">عقاراتنا</a></li>
-      <li><a href="">العملاء</a></li>
-      <li><a href="">اتصل بنا</a></li>
+    <ul class="list-unstyled lista">
+      <li class="nav-link"><a href="">الرئيسية</a></li>
+      <li class="nav-link"><a href="">من نحن</a></li>
+      <li class="nav-link"><a href="">عقاراتنا</a></li>
+      <li class="nav-link"><a href="">العملاء</a></li>
+      <li class="nav-link"><a href="">اتصل بنا</a></li>
     </ul>
+    <div class="contact">
+      <div class="con">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:eskanrealestate.com">eskanrealestate.com</a>
+      </div>
+      <div class="con">
+        <i class="fas fa-mobile"></i>
+        <span>(32548-687)-(566166616)</span>
+      </div>
+    </div>
+    <div class="social">
+      <ul class="list-unstyled">
+        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+        <li><a href=""><i class="fab fa-snapchat"></i></a></li>
+      </ul>
+    </div>
   </div>
 
   <!-- top header -->
@@ -60,7 +94,7 @@
   </div>
 
   <!-- navbar -->
-  <div class="mynavbar">
+  <div class="mynavbar" data-aos="fade-up" data-aos-duration="2000">
     <div class="container-fluid">
       <ul class="list-unstyled lista">
         <li><a href="">الرئيسية</a></li>
@@ -84,7 +118,7 @@
 
 
   <!-- header -->
-  <div class="header" style="background-image: url('./assets/images/header.png');">
+  <div class="header" style="background-image: url('./assets/images/header.png');" data-aos="fade-up" data-aos-duration="2000">
     <div class="search-box">
       <form action="">
         <ul class="list-unstyled typeList">
@@ -161,7 +195,7 @@
   </div>
 
 
-  <div class="special-real-estate">
+  <div class="special-real-estate" data-aos="fade-up" data-aos-duration="2000">
     <div class="container">
       <div class="section-header">
         <span></span>
@@ -289,7 +323,7 @@
     </div>
   </div>
 
-  <div class="special-real-estate new-added">
+  <div class="special-real-estate new-added" data-aos="fade-up" data-aos-duration="2000">
     <div class="container">
       <div class="section-header">
         <span></span>
@@ -417,7 +451,7 @@
     </div>
   </div>
 
-  <div class="ourlicents">
+  <div class="ourlicents" data-aos="fade-up" data-aos-duration="2000">
     <div class="container">
       <div class="section-header">
         <span></span>
@@ -459,13 +493,13 @@
   </div>
 
   <!-- map -->
-  <div class="contact-us" style="background-image: url('./assets/images/map.png');">
+  <div class="contact-us" style="background-image: url('./assets/images/map.png');" data-aos="fade-up" data-aos-duration="2000"> 
     <div class="ifream-map">
       <iframe
-      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13815.702456229359!2d31.411330250000006!3d30.038991850000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1630092741226!5m2!1sen!2seg"
-       style="border:0;" allowfullscreen="" loading="lazy">
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13815.702456229359!2d31.411330250000006!3d30.038991850000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1630092741226!5m2!1sen!2seg"
+        style="border:0;" allowfullscreen="" loading="lazy">
       </iframe>
-      <div class="contact-info">
+      <div class="contact-info" data-aos="fade-up" data-aos-duration="2000">
         <h5>تواصل معنا</h5>
         <ul class="list-unstyled">
           <li>
@@ -478,7 +512,7 @@
           </li>
           <li>
             <i class="fas fa-map-marked-alt"></i>
-            <span>السعوديه-الرياض -حي الشيخ 
+            <span>السعوديه-الرياض -حي الشيخ
               عبد العزيز-المبنى التاسع
             </span>
           </li>
@@ -488,7 +522,7 @@
   </div>
 
 
-  <footer class="site-footer">
+  <footer class="site-footer" data-aos="fade-up" data-aos-duration="2000">
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-3">
@@ -554,6 +588,7 @@
   <script src="./assets/js/jquery-3.3.1.min.js"></script>
   <script src="./assets/js/popper.min.js"></script>
   <script src="./assets/js/bootstrap.min.js"></script>
+  <script src="./assets/js/jquery-ui.min.js"></script>
   <script src="./assets/js/jquery.nice-select.min.js"></script>
   <script src="./assets/js/aos.js"></script>
   <script src="./assets/js/owl.carousel.js"></script>
